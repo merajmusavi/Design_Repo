@@ -13,6 +13,20 @@
         android:theme="@style/Theme.Desing_Repo"
         tools:targetApi="31">
         <activity
+            android:name=".LottieAnimation"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".GetStart"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LoginPage"
             android:exported="false">
             <meta-data

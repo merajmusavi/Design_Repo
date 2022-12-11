@@ -9,21 +9,27 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-ImageView back;
-Button button;
+    Button design1,animation_page;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        back = findViewById(R.id.full_bg);
-        back.animate().scaleX(2).scaleY(2).setDuration(5000).start();
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        design1 = findViewById(R.id.design1);
+        animation_page = findViewById(R.id.animation_page);
+        animation_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),LoginPage.class);
+                Intent intent1 = new Intent(getApplication(),LottieAnimation.class);
+                startActivity(intent1);
+            }
+        });
+        design1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplication(),GetStart.class);
                 startActivity(intent);
             }
         });
+
     }
 }
